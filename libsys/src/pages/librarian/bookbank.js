@@ -34,38 +34,21 @@ function BookBank() {
         }
         fetchdata()
     },[])
-    let del_array=[]
-    bank.forEach((data)=>{
-            if(data["username"]===formUsername)
-            {
-                del_array.push(data["bookone"])
-                del_array.push(data["booktwo"])
-                del_array.push(data["bookthree"])
-                del_array.push(data["bookfour"])
-            }
-
-  })
+    
   
   const store = (e) => {
     e.preventDefault();
     
-    let named={
-                
-                        username:formUsername,
-                        bookone:formCallNumberOne,
-                        booktwo:formCallNumberTwo,
-                        bookthree:formCallNumberThree,
-                        bookfour:formCallNumberFour,
-
-            
-                       
-            }
     
     
-        db.collection('bookengaged').doc(formUsername).set(named,{merge:true})
+    
+        db.collection('bookengaged').doc(formCallNumberOne).set({username:formUsername,callnumber:formCallNumberOne},{merge:true})
               .then(()=>{
+                    db.collection('bookengaged').doc(formCallNumberTwo).set({username:formUsername,callnumber:formCallNumberTwo},{merge:true})
+                    db.collection('bookengaged').doc(formCallNumberThree).set({username:formUsername,callnumber:formCallNumberThree},{merge:true})
+                    db.collection('bookengaged').doc(formCallNumberFour).set({username:formUsername,callnumber:formCallNumberFour},{merge:true})
                     alert("Succesfully Registered")
-                    del_array.forEach((value)=>{db.collection('book').doc(value).delete()})
+                    
                     navigate("../book", { replace: true })
                 
               })

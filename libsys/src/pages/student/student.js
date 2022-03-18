@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./student.css"
 import firebase from "../firebase/fire";
 //import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -30,12 +30,10 @@ function Student() {
         bookengage.map((value)=>(
                 
                 (value["username"]===checkProfile.getProfile().username)?
-                `   <div class="engagedbook">
-                          <p>Username : ${value["username"]}</p>
-                          <p>BookOne : ${value["bookone"]}</p>
-                          <p>BookTwo : ${value["booktwo"]}</p>
-                          <p>BookThree : ${value["bookthree"]}</p>
-                          <p>BookFour : ${value["bookfour"]}</p>
+                `       <div class="engagedbooks">
+                          
+                          <p>Book : ${value["callnumber"]}</p>
+                          
                     </div>
                           
                 `:  ``
@@ -56,6 +54,7 @@ return (
                <button><Link to="/">Logout</Link></button>
                <button id="profile"><Link to="/studprof">Profile</Link></button>
                <button id="bookbank" onClick={studentpg}>BookBank</button>
+               <br></br>
                <div id="engaged"></div>
                 
     </React.Fragment>

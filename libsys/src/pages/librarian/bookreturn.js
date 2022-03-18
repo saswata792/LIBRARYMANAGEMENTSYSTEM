@@ -31,14 +31,11 @@ function BooksReturn() {
             
             if(value["username"]===formUsername)
             {
-                db.collection('bookreturned').doc(value["bookone"]).set({callnumber:value["bookone"]},{merge:true})
+                db.collection('bookreturned').doc(value["callnumber"]).set({callnumber:value["callnumber"]},{merge:true})
+                db.collection('bookengaged').doc(value["callnumber"]).delete()
                 .then(()=>{
-                    alert("submitted")
-                    db.collection('bookreturned').doc(value["booktwo"]).set({callnumber:value["booktwo"]},{merge:true})
-                    db.collection('bookreturned').doc(value["bookthree"]).set({callnumber:value["bookthree"]},{merge:true})
-                    db.collection('bookreturned').doc(value["bookfour"]).set({callnumber:value["bookfour"]},{merge:true})
                     navigate("../book", { replace: true })
-                    db.collection('bookengaged').doc(formUsername).delete()
+                    
                   
                 })
                 .catch((error)=>{

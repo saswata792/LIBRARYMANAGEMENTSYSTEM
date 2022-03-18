@@ -1,7 +1,7 @@
 #profile{
-    height:100px;
+    height:25px;
 }
-.engagedbook{
+.engagedbooks{
     background-color:black;
     text-align:center;
     color:white;
@@ -9,5 +9,7 @@
 #bookbank{
     color:red;
     background-color:white;
+    top:6%;
+    position:fixed;
     
 }

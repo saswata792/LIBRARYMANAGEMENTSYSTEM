@@ -27,10 +27,8 @@ function EngageBooks() {
             (val["username"]===undefined)?'':
             `   <div class="collection">
                       <p>Username : ${val["username"]}</p>
-                      <p>BookOne : ${val["bookone"]}</p>
-                      <p>BookTwo : ${val["booktwo"]}</p>
-                      <p>BookThree : ${val["bookthree"]}</p>
-                      <p>BookFour : ${val["bookfour"]}</p>
+                      <p>Book: ${val["callnumber"]}</p>
+                      
                 </div>
                       
             `

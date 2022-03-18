@@ -38,22 +38,9 @@ function Book() {
         }
         fetchdata()
       },[])
-   let books_available=[]
-    bookreturn.forEach((value)=>{
-      book.forEach((data)=>{
-        
-        var check_one=value["bookone"]
-        
-        var check_two=value["booktwo"]
-        var check_three=value["bookthree"]
-        var check_four=value["bookfour"]
-        if(data["callnumber"]!==undefined && value["username"]!==undefined)
-          if(data["callnumber"]!==check_one && data["callnumber"]!==check_two && data["callnumber"]!==check_three && data["callnumber"]!==check_four)
-          {
-              books_available.push(data)
-          }
-      })
-    })
+      
+  
+    
      
   const store = (e) => {
     e.preventDefault();
@@ -92,12 +79,23 @@ function Book() {
       
    }
   function Showcollection(){
-    console.log(books_available)
+    
     document.getElementById("fillform").style.display="none"
     document.getElementById("book").style.display="block"
+    let dummy_book=[]
+    let dummy_engaged=[]
+    let final_arr=[]  
+      book.forEach((data)=>{dummy_book.push(data)})
+      bookreturn.forEach((val)=>{dummy_engaged.push(val)})
+     
+      
+      let result = dummy_book.filter(o1 => !dummy_engaged.some(o2 => o1.callnumber === o2.callnumber))
+      result.forEach((data)=>{final_arr.push(data["callnumber"])})
+      
     let collect_final=''
-            books_available.map((val)=>(
-            (val["callnumber"]===undefined)?'':
+    
+            book.map((val)=>(
+            ((final_arr.includes(val["callnumber"]))&& val["callnumber"]!==undefined)?
             `   <div class="collection">
                       <p>BookName:${val["bookname"]}</p>
                       <p>Author:${val["author"]}</p>
@@ -106,7 +104,7 @@ function Book() {
                       
                 </div>
                       
-            `
+            `:''
             
             
         )).forEach((val)=>{collect_final+=val})
