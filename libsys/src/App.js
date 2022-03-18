@@ -8,6 +8,7 @@ import Student from "./pages/student/student";
 import StudProfile from "./pages/student/profile"; 
 import BookBank from "./pages/librarian/bookbank";
 import EngageBooks from "./pages/librarian/bookengage";
+import Search from "./pages/librarian/searchstudent";
 import BooksReturn from "./pages/librarian/bookreturn";
 import React from "react";
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/libprofile" element={<LibProfile />} />
           <Route exact path="/engagebooks" element={<EngageBooks />} />
           <Route exact path="/bookreturn" element={<BooksReturn />} />
+          <Route exact path="/search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>
