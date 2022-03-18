@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./book.css";
 import firebase from "../firebase/fire";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom";
 var db=firebase.firestore();
 
@@ -16,7 +16,7 @@ function EngageBooks() {
                 
 
         const fetchdata= async()=>{
-            const check=await db.collection('bookbank').get()
+            const check=await db.collection('bookengaged').get()
             setEngage(check.docs.map(doc=>doc.data()))
         }
         fetchdata()
@@ -24,7 +24,7 @@ function EngageBooks() {
     
     let collect_final=''
             bookengage.map((val)=>(
-            
+            (val["username"]===undefined)?'':
             `   <div class="collection">
                       <p>Username : ${val["username"]}</p>
                       <p>BookOne : ${val["bookone"]}</p>
@@ -39,8 +39,7 @@ function EngageBooks() {
         )).forEach((val)=>{collect_final+=val})
         if(collect_final==='')
         {
-            
-            collect_final=`<h1>No Books Available</h1>`
+            collect_final=`<h1>No Books Engaged</h1>`
         }
             
         document.getElementById("book").innerHTML=collect_final

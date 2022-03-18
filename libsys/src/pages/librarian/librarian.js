@@ -1,23 +1,23 @@
 import React from "react";
-import firebase from "../firebase/fire"
+//import firebase from "../firebase/fire"
 import { Link } from "react-router-dom";
 import "./librarian.css"
 import time from "./time"
 function Lib(){
   
-  let db=firebase.firestore()
-  const [details,setdetails]=React.useState([]);
-    React.useEffect(()=>
-      {	
+  // let db=firebase.firestore()
+  // const [details,setdetails]=React.useState([]);
+  //   React.useEffect(()=>
+  //     {	
          
                
  
-         const fetchdata= async()=>{
-           const check=await db.collection('userdetails').get()
-           setdetails(check.docs.map(doc=>doc.data()))
-         }
-        fetchdata()
-      },[])
+  //        const fetchdata= async()=>{
+  //          const check=await db.collection('userdetails').get()
+  //          setdetails(check.docs.map(doc=>doc.data()))
+  //        }
+  //       fetchdata()
+  //     },[])
   
   function attend(){
       
@@ -70,6 +70,7 @@ function Lib(){
             <button id="attendance" style={{display:"none"}} onClick={attend()}>Click Here</button>
             <button><Link to="/libprofile">Profile</Link></button>
             <button><Link to="/book">Book</Link></button>
+            
             <button><Link to="/">Logout</Link></button>
             <div id="two" >
               <div id="one" ></div>

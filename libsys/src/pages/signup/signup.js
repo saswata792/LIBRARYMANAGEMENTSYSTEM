@@ -13,7 +13,7 @@ var db=firebase.firestore();
 function Signup() {
   const navigate = useNavigate();
   let [usrnm,setUsername]= useState(); 
-  let [cardId,setCardId]=useState();
+  
   let [name, setName] = useState();
   let [email, setEmail] = useState();
   let [password, setPassword] = useState()
@@ -27,7 +27,7 @@ function Signup() {
     e.preventDefault();
     var formUsername=usrnm;
     var formName = name;
-    var formCardId = cardId;
+    
     var formEmail = email;
     var formPassword = password;
     var formConPassword=conpassword;
@@ -39,7 +39,7 @@ function Signup() {
           let named={
             username:formUsername,
             name: formName,
-            cardid:formCardId,
+            
             password:formPassword,
             email:formEmail,
             department:formDepartment,
@@ -48,7 +48,7 @@ function Signup() {
           }
           
          
-                db.collection('userdetails').doc(formUsername).set(named)
+                db.collection('userdetails').doc(formUsername).set(named,{merge:true})
                 .then(()=>{
                   alert("Succesfully Registered")
                   navigate("../stud", { replace: true })
@@ -79,9 +79,7 @@ function Signup() {
               <label htmlFor="usrnm" ><div className="snew"><b>USERNAME</b></div></label>
               <input type="text" className="susername-but" value={usrnm} onChange={(e) => setUsername(e.target.value)} id="susername" required></input>
 
-              <label htmlFor="cardid" ><div className="snew"><b>CARDID</b></div></label>
-              <input type="text" className="scardid-but" value={cardId} onChange={(e) => setCardId(e.target.value)} id="scardid" required></input>
-
+              
               <label htmlFor="name" ><div className="snew"><b>NAME</b></div></label>
               <input type="text" className="sname-but" value={name} onChange={(e) => setName(e.target.value)} id="sname" required></input>
 

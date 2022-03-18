@@ -29,7 +29,7 @@ function BookBank() {
                 
 
         const fetchdata= async()=>{
-            const check=await db.collection('bookbank').get()
+            const check=await db.collection('bookengaged').get()
             setBank(check.docs.map(doc=>doc.data()))
         }
         fetchdata()
@@ -62,7 +62,7 @@ function BookBank() {
             }
     
     
-        db.collection('bookbank').doc(formUsername).set(named)
+        db.collection('bookengaged').doc(formUsername).set(named,{merge:true})
               .then(()=>{
                     alert("Succesfully Registered")
                     del_array.forEach((value)=>{db.collection('book').doc(value).delete()})

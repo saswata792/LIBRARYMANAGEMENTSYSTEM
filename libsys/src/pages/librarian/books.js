@@ -14,21 +14,47 @@ function Book() {
   let [author, setAuthor] = useState();
   let [callnum, setCallNumber] = useState();
   let [location, setLocation] = useState();
-  const [collection,setcollection]=React.useState([]);
+  const [book,setBook]=React.useState([]);
   React.useEffect(()=>
   {	
      
            
 
      const fetchdata= async()=>{
-       const check=await db.collection('book').get()
-       setcollection(check.docs.map(doc=>doc.data()))
+       const check=await db.collection('bookdetails').get()
+       setBook(check.docs.map(doc=>doc.data()))
      }
     fetchdata()
   },[])
- // const [spells,setSpells]=React.useState([])
- // const [newSpellName,setNewSpellName]=React.useState()
-  
+      const [bookreturn,setbookreturn]=React.useState([]);
+      React.useEffect(()=>
+      {	
+        
+              
+
+        const fetchdata= async()=>{
+          const check=await db.collection('bookengaged').get()
+          setbookreturn(check.docs.map(doc=>doc.data()))
+        }
+        fetchdata()
+      },[])
+   let books_available=[]
+    bookreturn.forEach((value)=>{
+      book.forEach((data)=>{
+        
+        var check_one=value["bookone"]
+        
+        var check_two=value["booktwo"]
+        var check_three=value["bookthree"]
+        var check_four=value["bookfour"]
+        if(data["callnumber"]!==undefined && value["username"]!==undefined)
+          if(data["callnumber"]!==check_one && data["callnumber"]!==check_two && data["callnumber"]!==check_three && data["callnumber"]!==check_four)
+          {
+              books_available.push(data)
+          }
+      })
+    })
+     
   const store = (e) => {
     e.preventDefault();
     var formBookName = bookName;
@@ -47,7 +73,7 @@ function Book() {
     
     if(formCallNumber.includes("@"))
     {
-        db.collection('book').doc(formCallNumber).set(named)
+        db.collection('bookdetails').doc(formCallNumber).set(named,{merge:true})
               .then(()=>{
                 alert("Succesfully Registered")
                 navigate("../book", { replace: true })
@@ -66,11 +92,12 @@ function Book() {
       
    }
   function Showcollection(){
+    console.log(books_available)
     document.getElementById("fillform").style.display="none"
     document.getElementById("book").style.display="block"
     let collect_final=''
-            collection.map((val)=>(
-            
+            books_available.map((val)=>(
+            (val["callnumber"]===undefined)?'':
             `   <div class="collection">
                       <p>BookName:${val["bookname"]}</p>
                       <p>Author:${val["author"]}</p>
@@ -105,6 +132,7 @@ function Book() {
               <button onClick={Showform}>Show Fill up Form</button>
               <button><Link to="/bookbank">Show Book Bank</Link></button>
               <button><Link to="/engagebooks">Engaged Books</Link></button>
+              <button><Link to="/bookreturn">Returned Book</Link></button>
               <button><Link to="/">Logout</Link></button>
               <div id="book"></div>
               <div class="signup" id="fillform" style={{display:"none"}}>
