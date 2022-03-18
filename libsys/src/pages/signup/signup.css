@@ -1,0 +1,162 @@
+
+  
+  
+  .sheader{
+    
+    text-align: center;
+    
+    top:25vh;
+    left:25vw;
+    font-size: 50px;
+    color:rgb(234, 231, 238);
+  }
+  
+  button{
+  display: block;
+  background-color: #111010;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  }
+  
+  .sb1{
+    position: fixed;
+    left: 48%;
+    top:95%;
+    color:rgb(212, 22, 22);
+    background-color: aliceblue;
+    }
+    
+    
+  
+  .susername-but,.sname-but,.semail-but,.spassword-but,.sconpassword-but,.sdepartment-but,.scardid-but{
+      display: block;
+      text-align: center;
+      border-radius: 5px;
+      position: relative; 
+      left:50%; 
+      margin-top: 20px;
+      transform: translate(-50%,-50%);
+      color:black;
+      font-weight: bold;
+  }
+  
+  .signup{
+        height:800px;
+        width:50%;
+        text-align: center;
+        position:fixed;
+        left:25%;
+        font-size: 20px;
+        color: #f0f3ea;
+        background-color: rgb(13, 14, 14);
+  }
+/* <!----------------------------------------------------------------!> */
+@media screen and (max-width: 1080px) {
+      .sheader{
+
+text-align: center;
+
+top:25vh;
+left:25vw;
+font-size: 30px;
+color:rgb(234, 231, 238);
+}
+
+button{
+display: block;
+background-color: #111010;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+}
+
+.sb1{
+position: fixed;
+left: 47%;
+top:90%;
+color:rgb(29, 28, 28);
+}
+
+
+
+.susername-but,.semail-but,.spassword-but,.sconpassword-but,.sdepartment-but{
+      display: block;
+      text-align: center;
+      border-radius: 5px;
+      position: relative; 
+      left:50%; 
+      margin-top: 20px;
+      transform: translate(-50%,-50%);
+      color:black;
+}
+
+.signup{
+      height:800px;
+      width:50%;
+      text-align: center;
+      position:fixed;
+      left:25%;
+      font-size: 20px;
+      color: #f0f3ea;
+      background-color: rgb(13, 14, 14);
+}
+      }             
+                  
+/* <!----------------------------------------------------------------!> */
+@media screen and (max-width: 600px)
+{
+
+      
+.sheader{
+
+text-align: center;
+
+top:25vh;
+left:25vw;
+font-size: 30px;
+color:rgb(234, 231, 238);
+}
+
+button{
+display: block;
+background-color: #111010;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+}
+
+.sb1{
+position: fixed;
+left: 45%;
+top:90%;
+color:rgb(29, 28, 28);
+}
+
+
+
+.susername-but,.semail-but,.spassword-but,.sconpassword-but,.sdepartment-but{
+display: block;
+text-align: center;
+border-radius: 5px;
+position: relative; 
+left:50%; 
+margin-top: 20px;
+transform: translate(-50%,-50%);
+color:black;
+}
+
+.signup{
+height:800px;
+width:50%;
+text-align: center;
+position:fixed;
+left:25%;
+font-size: 20px;
+color: #f0f3ea;
+background-color: rgb(13, 14, 14);
+}
+      
+}                    
+  
+       

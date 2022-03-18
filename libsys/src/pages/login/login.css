@@ -1,0 +1,265 @@
+.image{
+  background-image: url("./home.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  height: 100vh;
+
+
+}
+
+.header{
+  
+  text-align: center;
+  
+  top:25vh;
+  left:25vw;
+  font-size: 50px;
+  color:rgb(240, 239, 243);
+}
+
+button{
+display: block;
+background-color: #f3e9e9;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+}
+
+.b1{
+  position: fixed;
+  left: 45%;
+  top:82%;
+  }
+.b2{
+    position: fixed;
+    left: 51.5%;
+    top:82%;
+    
+  }
+      
+  
+
+.username-but{
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    position: relative; 
+    
+    left:50%; 
+    margin-top: 20px;
+    transform: translate(-50%,-50%);
+}
+.password-but{
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    position: relative; 
+    
+    left :50%;
+    margin-top: 20px;
+    transform: translate(-50%,-50%);
+    }
+    
+.tnew-one{
+      color: #eeebeb;
+      left:0%;
+      position: relative;
+          
+}
+.tnew-two{
+    color: #eeebeb;
+    right: 0%;
+    position: relative;
+}
+.login{
+      height:400px;
+      width:50%;
+      text-align: center;
+      position:fixed;
+      top:30%;
+      left:25%;
+      border: 5px solid rgb(55, 0, 255);
+      border-radius: 5px;
+      font-size: 20px;
+      color: #f0e6e6;
+      background-color: rgb(10, 10, 10);
+}
+      
+
+      @media screen and (max-width: 1080px) {
+                  .image{
+                    background-image: url("./home.jpg");
+                    background-repeat: no-repeat;
+                    background-size:cover;
+                    width: 100%;
+                    height: 100vh;
+                  
+                  
+                  }
+                  
+                  .header{
+                    
+                    text-align: center;
+                    
+                    top:25vh;
+                    left:25vw;
+                    font-size: 40px;
+                    color:rgb(241, 238, 247);
+                  }
+                  
+                  button{
+                  display: block;
+                  background-color: #f3e9e9;
+                  border-radius: 5px;
+                  text-align: center;
+                  font-weight: bold;
+                  }
+                  
+                  .b1{
+                    position: fixed;
+                    left: 49%;
+                    top:77%;
+                    }
+                  .b2{
+                      position: fixed;
+                      left: 40%;
+                      top:77%;
+                      }  
+                    
+                  
+                  .username-but{
+                      display: block;
+                      text-align: center;
+                      border-radius: 5px;
+                      position: relative; 
+                      
+                      left:44%; 
+                      margin-top: 20px;
+                      transform: translate(-50%,-50%);
+                  }
+                  .password-but{
+                      display: block;
+                      text-align: center;
+                      border-radius: 5px;
+                      position: relative; 
+                      
+                      left :44%;
+                      margin-top: 20px;
+                      transform: translate(-50%,-50%);
+                      }
+                      
+                  .tnew-one{
+                        color: #eeebeb;
+                        left: 0%;
+                        position: fixed;
+                            
+                  }
+                  .tnew-two{
+                      color: #eeebeb;
+                      left: 0%;
+                      position: fixed;
+                  }
+                  .login{
+                        height:400px;
+                        width:50%;
+                        text-align: center;
+                        position:fixed;
+                        border: 5px solid rgb(55, 0, 255);
+                        border-radius: 5px;
+                        
+                        top:20%;
+                        left:25%;
+                        font-size: 20px;
+                        color: #ece6e6;
+                        background-color: rgb(13, 14, 14);
+                  }
+              
+            }
+
+            @media screen and (max-width: 600px)
+            {
+                    .image{
+                      background-image: url("./home.jpg");
+                      background-repeat: no-repeat;
+                      background-size:cover;
+                      width: 100%;
+                      height: 100vh;
+                    
+                    
+                    }
+                    
+                    .header{
+                      
+                      text-align: center;
+                      
+                      top:25vh;
+                      left:25vw;
+                      font-size: 30px;
+                      color:rgb(236, 232, 243);
+                    }
+                    
+                    button{
+                    display: block;
+                    background-color: #f3e9e9;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-weight: bold;
+                    }
+                    
+                    .b1{
+                      position: fixed;
+                      left: 50%;
+                      top:80%;
+                      }
+                    .b2{
+                      position: fixed;
+                      left: 40%;
+                      top:80%;
+                    }
+                      
+                    
+                    .username-but{
+                        display: block;
+                        text-align: center;
+                        border-radius: 5px;
+                        position: relative; 
+                        
+                        left:50%; 
+                        margin-top: 10px;
+                        transform: translate(-50%,-50%);
+                    }
+                    .password-but{
+                        display: block;
+                        text-align: center;
+                        border-radius: 5px;
+                        position: relative; 
+                        
+                        left :50%;
+                        margin-top: 20px;
+                        transform: translate(-50%,-50%);
+                        }
+                        
+                    .tnew-one{
+                          color: #eeebeb;
+                          right: 0%;
+                          position: relative;
+                              
+                    }
+                    .tnew-two{
+                        color: #eeebeb;
+                        right: 0%;
+                        position: relative;
+                    }
+                    .login{
+                          height:400px;
+                          width:60%;
+                          text-align: center;
+                          position:fixed;
+                          top:30%;
+                          left:25%;
+                          font-size: 20px;
+                          color: #fcf5f5;
+                          background-color: rgb(15, 15, 15);
+                    }
+            }              

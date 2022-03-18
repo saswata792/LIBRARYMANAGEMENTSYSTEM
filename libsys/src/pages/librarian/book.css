@@ -1,0 +1,13 @@
+.collection{
+    align-items: center;
+    background-color:black;
+    color:aliceblue;
+    text-align:center;
+}
+.book_but{
+    background-color:white;
+    color:red;
+    position: relative;
+    left:45%;
+
+}

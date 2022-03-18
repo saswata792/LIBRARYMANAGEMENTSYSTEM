@@ -1,0 +1,27 @@
+h1{
+    text-align:center;
+}
+.lib,#passchange{
+    
+    color:rgb(0, 2, 3);
+    position: relative;
+   
+    align-items: center;
+    
+    text-align: center;
+    font-size: large;
+}
+#change{
+    background-color:black;
+    color:white;
+    position: relative;
+    left:45%;
+    
+}
+#save{
+    background-color:black;
+    color:white;
+    position: relative;
+    top: 10px;
+    left:48%;
+}

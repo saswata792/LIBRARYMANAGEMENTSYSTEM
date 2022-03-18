@@ -1,0 +1,67 @@
+
+#two{
+    background-image: url("./lib.jpg") ;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+    width: 100%;
+}
+
+th,td{
+    position: relative;
+    left:15%;
+    top:55%;
+    background-color: black;
+    color:azure;
+    width:400px;
+    
+    height: 20px;
+} 
+
+
+
+@media screen and (max-width: 1080px) {
+ 
+    #two{
+        background-image: url("./lib.jpg") ;
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        height: 100vh;
+        width: 100%;
+    }
+    
+    th,td{
+        position: relative;
+        left:2%;
+        top:55%;
+        background-color: black;
+        color:azure;
+        width:350px;
+        
+        height: 20px;
+    } 
+
+}
+
+@media screen and (max-width: 600px) {
+
+    
+    #two{
+        background-image: url("./lib.jpg") ;
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        height: 100vh;
+        width: 100%;
+    }
+    
+    th,td{
+        position: relative;
+        left:2%;
+        background-color: black;
+        color:azure;
+        width:150px;
+        
+        height: 20px;
+    } 
+
+}
