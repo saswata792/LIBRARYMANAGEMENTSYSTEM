@@ -50,8 +50,7 @@ function StudProfile()
             <div id="profilestudent">
                 <div class="lib"><label htmlFor="username"><b>USERNAME</b></label></div>
                 <div class="lib" >{checkProfile.getProfile().username}</div>
-                <div class="lib"> <label htmlFor="name"><b>CARDID</b></label></div>
-                <div class="lib" >{checkProfile.getProfile().name}</div> 
+                
                 <div class="lib"> <label htmlFor="email"><b>EMAIL</b></label></div>
                 <div class="lib" >{checkProfile.getProfile().email}</div> 
                 <div class="lib">  <label htmlFor="name"><b>NAME</b></label></div>

@@ -10,6 +10,7 @@ import BookBank from "./pages/librarian/bookbank";
 import EngageBooks from "./pages/librarian/bookengage";
 import Search from "./pages/librarian/searchstudent";
 import BooksReturn from "./pages/librarian/bookreturn";
+import Ejournal from "./pages/librarian/ejournal";
 import React from "react";
 function App() {
   
@@ -28,7 +29,7 @@ function App() {
           <Route exact path="/libprofile" element={<LibProfile />} />
           <Route exact path="/engagebooks" element={<EngageBooks />} />
           <Route exact path="/bookreturn" element={<BooksReturn />} />
-          <Route exact path="/search" element={<Search />} />
+          <Route exact path="/ejournal" element={<Ejournal/>} />
         </Routes>
       </BrowserRouter>
     </div>

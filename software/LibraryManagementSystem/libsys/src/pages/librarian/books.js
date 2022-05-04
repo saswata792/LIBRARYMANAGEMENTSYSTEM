@@ -129,6 +129,7 @@ function Book() {
               <button onClick={Showcollection}>ShowCollection</button>
               <button onClick={Showform}>Show Fill up Form</button>
               <button><Link to="/bookbank">Show Book Bank</Link></button>
+              <button><Link to="/ejournal">E-JOURNAL</Link></button>
               <button><Link to="/engagebooks">Engaged Books</Link></button>
               <button><Link to="/bookreturn">Returned Book</Link></button>
               <button><Link to="/">Logout</Link></button>
