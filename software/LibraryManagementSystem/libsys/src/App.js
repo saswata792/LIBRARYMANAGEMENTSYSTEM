@@ -30,6 +30,7 @@ function App() {
           <Route exact path="/engagebooks" element={<EngageBooks />} />
           <Route exact path="/bookreturn" element={<BooksReturn />} />
           <Route exact path="/ejournal" element={<Ejournal/>} />
+          <Route exact path="/search" element={<Search/>} />
         </Routes>
       </BrowserRouter>
     </div>
