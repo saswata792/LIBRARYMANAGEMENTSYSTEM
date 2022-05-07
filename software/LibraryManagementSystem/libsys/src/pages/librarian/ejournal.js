@@ -37,7 +37,7 @@ function Ejournal()
             data:{
                     labels:names,
                     datasets:[{
-                        label:'Population',
+                        label:'Traffic',
                         backgroundColor: 'blue',
                         data:datas
                         
@@ -60,7 +60,7 @@ function Ejournal()
             data:{
                     labels:names,
                     datasets:[{
-                        label:'Population',
+                        label:'Traffic',
                         backgroundColor: 'blue',
                         data:datas
                         
@@ -82,7 +82,7 @@ function Ejournal()
             data:{
                     labels:names,
                     datasets:[{
-                        label:'Population',
+                        label:'Traffic',
                         backgroundColor: 'blue',
                         data:datas
                         
